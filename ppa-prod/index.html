@@ -5,10 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="PPA - Piyush Pore Architect. Premium architecture services for Interior, Landscape, and Industrial design in Pune, Nashik, and Kopargaon, Maharashtra.">
 <meta name="theme-color" content="#A3472D">
-<meta property="og:title" content="PPA - Piyush Pore Architect">
-<meta property="og:description" content="Premium Architecture Services — Interior | Landscape | Industrial">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://pparchitect.netlify.app">
 <title>PPA - Piyush Pore Architect | Premium Architecture Design</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' font-weight='bold' fill='%23A3472D'>P</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,246 +12,216 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 <style>
-/* ══════════════════════════════════════
-   NAVBAR
-══════════════════════════════════════ */
-.navbar {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  background: transparent;
-  padding: 1rem 0;
-  transition: background 0.5s ease, box-shadow 0.5s ease;
-}
-.navbar.scrolled {
-  background: rgba(246,239,233,0.98);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 2px 20px rgba(0,0,0,0.08);
-}
-/* Logo swap: cream on hero, brown on scroll */
-.logo-cream { display: block; height: 44px; width: auto; }
-.logo-brown { display: none;  height: 44px; width: auto; }
-.navbar.scrolled .logo-cream { display: none; }
-.navbar.scrolled .logo-brown { display: block; }
-/* Nav link colours */
-.nav-link { color: rgba(255,255,255,0.92) !important; transition: color 0.5s; }
-.navbar.scrolled .nav-link { color: #2C2C2C !important; }
-.nav-link::after { background: rgba(240,230,214,0.7); }
-.navbar.scrolled .nav-link::after { background: #A3472D; }
-.menu-toggle span { background: #F0E6D6; transition: background 0.4s; }
-.navbar.scrolled .menu-toggle span { background: #A3472D; }
-/* Navbar topo accent — right side only */
-.navbar-topo {
-  position: absolute; top: 0; right: 0;
-  width: 42%; height: 100%;
-  overflow: hidden; pointer-events: none; opacity: 0.06;
-  transition: opacity 0.5s;
-}
-.navbar.scrolled .navbar-topo { opacity: 0.04; }
-.navbar-topo svg { width: 100%; height: 100%; }
+/* NAVBAR */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:100;background:transparent;padding:1rem 0;transition:background 0.5s,box-shadow 0.5s;}
+.navbar.scrolled{background:rgba(246,239,233,0.98);backdrop-filter:blur(12px);box-shadow:0 2px 20px rgba(0,0,0,0.08);}
+.logo-cream{display:block;height:52px;width:auto;}
+.logo-brown{display:none;height:52px;width:auto;}
+.navbar.scrolled .logo-cream{display:none;}
+.navbar.scrolled .logo-brown{display:block;}
+.nav-link{color:rgba(255,255,255,0.92)!important;transition:color 0.5s;}
+.navbar.scrolled .nav-link{color:#2C2C2C!important;}
+.nav-link::after{background:rgba(240,230,214,0.7);}
+.navbar.scrolled .nav-link::after{background:#A3472D;}
+.menu-toggle span{background:#F0E6D6;transition:background 0.4s;}
+.navbar.scrolled .menu-toggle span{background:#A3472D;}
+.navbar-topo{position:absolute;top:0;right:0;width:42%;height:100%;overflow:hidden;pointer-events:none;opacity:0.06;}
+.navbar-topo svg{width:100%;height:100%;}
 
-/* ══════════════════════════════════════
-   HERO
-══════════════════════════════════════ */
-.hero {
-  margin-top: 0; padding: 0;
-  min-height: 100vh;
-  display: flex; align-items: center; justify-content: center;
-  background: linear-gradient(140deg, #9E3F26 0%, #A3472D 35%, #B8593D 70%, #C07A5C 100%);
-  position: relative; overflow: hidden;
-}
-/* Topographic SVG background */
-.hero-topo {
-  position: absolute; inset: 0;
-  pointer-events: none; overflow: hidden;
-}
-.hero-topo svg { width: 100%; height: 100%; position: absolute; inset: 0; }
-.tl  { fill: none; stroke: rgba(240,215,185,0.22); stroke-width: 1.1; }
-.tlt { fill: none; stroke: rgba(240,215,185,0.13); stroke-width: 0.7; }
+/* HERO */
+.hero{margin-top:0;padding:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(140deg,#9E3F26 0%,#A3472D 35%,#B8593D 70%,#C07A5C 100%);position:relative;overflow:hidden;}
+.hero-topo{position:absolute;inset:0;pointer-events:none;overflow:hidden;}
+.hero-topo svg{width:100%;height:100%;position:absolute;inset:0;}
+.tl{fill:none;stroke:rgba(240,215,185,0.22);stroke-width:1.1;}
+.tlt{fill:none;stroke:rgba(240,215,185,0.13);stroke-width:0.7;}
 
-/* ══════════════════════════════════════
-   HERO CONTENT
-══════════════════════════════════════ */
-.hero-content {
-  text-align: center; z-index: 2;
-  max-width: 860px;
-  padding: 5.5rem 1.5rem 2rem;
-  display: flex; flex-direction: column; align-items: center;
-  min-height: 100vh; justify-content: center;
-  gap: 0;
-}
-.hero-logo-img {
-  height: 78px; width: auto;
-  margin-bottom: 1.8rem;
-  animation: fadeUp 0.9s ease 0.1s both;
-  filter: drop-shadow(0 2px 14px rgba(0,0,0,0.2));
-}
-/* Name stroke→fill animation */
-.hero-title-svg {
-  width: 100%; max-width: 580px; height: auto;
-  overflow: visible; margin: 0 auto 0.3rem; display: block;
-  animation: fadeUp 0.9s ease 0.4s both;
-}
-.title-text {
-  font-family: 'Playfair Display', serif;
-  font-size: 50px; font-weight: 700;
-  fill: none;
-  stroke: rgba(240,230,214,0.85); stroke-width: 1px;
-  paint-order: stroke fill;
-  animation: fillText 2.2s ease forwards 0.9s;
-}
-@keyframes fillText {
-  0%   { fill: none; stroke: rgba(240,230,214,0.85); stroke-width: 1px; }
-  50%  { fill: rgba(240,230,214,0.3); stroke: rgba(240,230,214,0.7); stroke-width: 0.5px; }
-  100% { fill: #F0E6D6; stroke: rgba(240,230,214,0); stroke-width: 0; }
-}
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-.hero-divider {
-  width: 48px; height: 1.5px;
-  background: rgba(240,230,214,0.4);
-  margin: 0.85rem auto;
-  animation: fadeUp 0.9s ease 0.7s both;
-}
-.hero-subtitle {
-  font-size: 1rem; color: rgba(240,230,214,0.82);
-  margin-bottom: 0.45rem; font-weight: 300; letter-spacing: 1px;
-  animation: fadeUp 0.9s ease 0.8s both;
-}
-.hero-services-line {
-  font-size: 0.72rem; color: rgba(240,230,214,0.58);
-  letter-spacing: 2.5px; font-family: 'Poppins', sans-serif;
-  font-weight: 400; text-transform: uppercase;
-  margin-bottom: 1.6rem;
-  animation: fadeUp 0.9s ease 0.9s both;
-}
-.hero-cta {
-  display: flex; gap: 0.8rem;
-  justify-content: center; flex-wrap: wrap;
-  margin-bottom: 1.2rem;
-  animation: fadeUp 0.9s ease 1s both;
-}
-.btn-outline {
-  background: transparent; color: #F0E6D6;
-  border: 1.5px solid rgba(240,230,214,0.5);
-  border-radius: 8px; padding: 0.6rem 1.2rem;
-  font-size: 0.86rem; font-weight: 500;
-  display: inline-flex; align-items: center; gap: 0.42rem;
-  cursor: pointer; transition: all 0.3s; text-decoration: none;
-  font-family: 'Poppins', sans-serif;
-}
-.btn-outline:hover { background: rgba(240,230,214,0.13); border-color: #F0E6D6; transform: translateY(-2px); }
-.btn-icon { width: 15px; height: 15px; flex-shrink: 0; }
-.hero-secondary { animation: fadeUp 0.9s ease 1.1s both; }
-.link-arrow {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  color: rgba(240,230,214,0.72); font-weight: 500; font-size: 0.87rem;
-  text-decoration: none; transition: all 0.3s; font-family: 'Poppins', sans-serif;
-}
-.link-arrow:hover { color: #F0E6D6; gap: 0.82rem; }
-.link-arrow svg { width: 16px; height: 16px; }
+/* HERO CONTENT — centered */
+.hero-content{text-align:center;z-index:2;width:100%;max-width:860px;padding:5.5rem 1.5rem 2rem;display:flex;flex-direction:column;align-items:center;min-height:100vh;justify-content:center;}
+.hero-logo-img{height:90px;width:auto;margin-bottom:2rem;animation:fadeUp 0.9s ease 0.1s both;}
 
-/* ══════════════════════════════════════
-   SERVICE CARDS
-══════════════════════════════════════ */
-.services { padding: 4rem 1.5rem; background: var(--light); }
-.services-section-title { text-align: center; font-family: var(--font-serif); font-size: 2rem; color: var(--primary); margin-bottom: 0.4rem; }
-.services-section-sub { text-align: center; color: var(--gray); font-size: 0.9rem; margin-bottom: 2.5rem; }
-.services-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
-.service-card { background: var(--white); border: 1px solid rgba(163,71,45,0.1); border-radius: 12px; overflow: hidden; cursor: pointer; transition: all 0.4s; }
-.service-card:hover { border-color: var(--primary); box-shadow: 0 16px 40px rgba(163,71,45,0.15); transform: translateY(-4px); }
-.service-card.active { border-color: var(--primary); box-shadow: 0 16px 40px rgba(163,71,45,0.2); }
-.service-card-preview { width: 100%; height: 200px; overflow: hidden; }
-.service-card-preview img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
-.service-card:hover .service-card-preview img { transform: scale(1.05); }
-.service-card-body { padding: 1.3rem 1.4rem; display: flex; justify-content: space-between; align-items: center; }
-.service-card-body h3 { color: var(--primary); font-size: 1.1rem; margin: 0; font-family: var(--font-serif); }
-.service-card-info p { color: var(--gray); font-size: 0.82rem; margin: 0.25rem 0 0; }
-.service-card-info { flex: 1; }
-.service-card-arrow { width: 33px; height: 33px; border: 1.5px solid rgba(163,71,45,0.25); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s; flex-shrink: 0; margin-left: 1rem; }
-.service-card:hover .service-card-arrow,
-.service-card.active .service-card-arrow { background: var(--primary); border-color: var(--primary); }
-.service-card-arrow svg { width: 14px; height: 14px; color: var(--primary); transition: all 0.3s; }
-.service-card:hover .service-card-arrow svg,
-.service-card.active .service-card-arrow svg { color: white; }
-.arrow-icon { transition: transform 0.3s; }
-.service-card.active .arrow-icon { transform: rotate(90deg); }
+/* Name animation */
+.hero-title-svg{width:100%;max-width:640px;height:auto;overflow:visible;margin:0 auto 0.3rem;display:block;animation:fadeUp 0.9s ease 0.4s both;}
+.title-text{font-family:'Playfair Display',serif;font-size:54px;font-weight:700;fill:none;stroke:rgba(240,230,214,0.85);stroke-width:1px;paint-order:stroke fill;animation:fillText 2.2s ease forwards 0.9s;}
+@keyframes fillText{0%{fill:none;stroke:rgba(240,230,214,0.85);stroke-width:1px;}50%{fill:rgba(240,230,214,0.3);stroke:rgba(240,230,214,0.7);stroke-width:0.5px;}100%{fill:#F0E6D6;stroke:rgba(240,230,214,0);stroke-width:0;}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+
+.hero-divider{width:48px;height:1.5px;background:rgba(240,230,214,0.4);margin:0.85rem auto;animation:fadeUp 0.9s ease 0.7s both;}
+
+/* Typewriter */
+.hero-subtitle{font-size:1.05rem;color:rgba(240,230,214,0.82);margin-bottom:0.45rem;font-weight:300;letter-spacing:1px;min-height:1.6rem;animation:fadeUp 0.9s ease 0.8s both;}
+.typewriter-cursor{display:inline-block;border-right:2px solid rgba(240,230,214,0.7);animation:blink 0.75s step-end infinite;margin-left:1px;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0;}}
+
+.hero-services-line{font-size:0.72rem;color:rgba(240,230,214,0.58);letter-spacing:2.5px;font-family:'Poppins',sans-serif;font-weight:400;text-transform:uppercase;margin-bottom:1.8rem;animation:fadeUp 0.9s ease 0.9s both;}
+
+/* CTA */
+.hero-cta{display:flex;gap:0.8rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.4rem;animation:fadeUp 0.9s ease 1s both;}
+.btn-outline{background:transparent;color:#F0E6D6;border:1.5px solid rgba(240,230,214,0.5);border-radius:8px;padding:0.62rem 1.25rem;font-size:0.86rem;font-weight:500;display:inline-flex;align-items:center;gap:0.42rem;cursor:pointer;transition:all 0.3s;text-decoration:none;font-family:'Poppins',sans-serif;}
+.btn-outline:hover{background:rgba(240,230,214,0.13);border-color:#F0E6D6;transform:translateY(-2px);}
+.btn-icon{width:15px;height:15px;flex-shrink:0;}
+
+/* Stats */
+
+
+/* View Portfolio */
+.hero-secondary{animation:fadeUp 0.9s ease 1.1s both;margin-bottom:1rem;}
+.link-arrow{display:inline-flex;align-items:center;gap:0.5rem;color:rgba(240,230,214,0.72);font-weight:500;font-size:0.87rem;text-decoration:none;transition:all 0.3s;font-family:'Poppins',sans-serif;}
+.link-arrow:hover{color:#F0E6D6;gap:0.82rem;}
+.link-arrow svg{width:16px;height:16px;}
+
+/* Scroll indicator */
+.scroll-indicator{animation:fadeUp 0.9s ease 1.2s both;display:flex;flex-direction:column;align-items:center;gap:0.4rem;}
+.scroll-indicator span{font-size:0.65rem;color:rgba(240,230,214,0.45);letter-spacing:2px;text-transform:uppercase;font-family:'Poppins',sans-serif;}
+.scroll-arrow{width:20px;height:20px;color:rgba(240,230,214,0.45);animation:bounce 1.8s ease-in-out infinite;}
+@keyframes bounce{0%,100%{transform:translateY(0);}50%{transform:translateY(7px);}}
+
+/* SERVICES */
+.services{padding:4rem 1.5rem;background:var(--light);}
+.services-section-title{text-align:center;font-family:var(--font-serif);font-size:2rem;color:var(--primary);margin-bottom:0.4rem;}
+.services-section-sub{text-align:center;color:var(--gray);font-size:0.9rem;margin-bottom:2.5rem;}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+
+/* Scroll reveal */
+.reveal{opacity:0;transform:translateY(32px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.reveal-delay-1{transition-delay:0.1s;}
+.reveal-delay-2{transition-delay:0.2s;}
+.reveal-delay-3{transition-delay:0.3s;}
+.reveal-delay-4{transition-delay:0.4s;}
+.reveal-delay-5{transition-delay:0.5s;}
+
+/* Service cards */
+.service-card{background:var(--white);border:1px solid rgba(163,71,45,0.1);border-radius:12px;overflow:hidden;cursor:pointer;transition:all 0.4s;position:relative;}
+.service-card:hover{border-color:var(--primary);box-shadow:0 16px 40px rgba(163,71,45,0.15);transform:translateY(-4px);}
+.service-card.active{border-color:var(--primary);box-shadow:0 16px 40px rgba(163,71,45,0.2);}
+.service-num{position:absolute;top:0.6rem;right:1rem;font-family:'Playfair Display',serif;font-size:3.5rem;font-weight:700;color:rgba(163,71,45,0.06);line-height:1;pointer-events:none;z-index:1;transition:color 0.4s;}
+.service-card:hover .service-num{color:rgba(163,71,45,0.1);}
+.service-card-preview{width:100%;height:200px;overflow:hidden;}
+.service-card-preview img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s;}
+.service-card:hover .service-card-preview img{transform:scale(1.05);}
+.service-card-body{padding:1.3rem 1.4rem;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2;}
+.service-card-body h3{color:var(--primary);font-size:1.1rem;margin:0;font-family:var(--font-serif);}
+.service-card-info p{color:var(--gray);font-size:0.82rem;margin:0.25rem 0 0;}
+.service-card-info{flex:1;}
+.service-card-arrow{width:33px;height:33px;border:1.5px solid rgba(163,71,45,0.25);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all 0.3s;flex-shrink:0;margin-left:1rem;}
+.service-card:hover .service-card-arrow,.service-card.active .service-card-arrow{background:var(--primary);border-color:var(--primary);}
+.service-card-arrow svg{width:14px;height:14px;color:var(--primary);transition:all 0.3s;}
+.service-card:hover .service-card-arrow svg,.service-card.active .service-card-arrow svg{color:white;}
+.arrow-icon{transition:transform 0.3s;}
+.service-card.active .arrow-icon{transform:rotate(90deg);}
 
 /* Strip */
-.image-strip-wrapper { grid-column: 1/-1; max-height: 0; overflow: hidden; transition: max-height 0.6s cubic-bezier(0.4,0,0.2,1), opacity 0.4s; opacity: 0; }
-.image-strip-wrapper.open { max-height: 420px; opacity: 1; }
-.image-strip-panel { background: var(--white); border: 1px solid rgba(163,71,45,0.12); border-radius: 12px; padding: 1.4rem; margin-top: 0.5rem; }
-.image-strip-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
-.image-strip-header h4 { font-family: var(--font-serif); color: var(--primary); font-size: 1.05rem; margin: 0; }
-.view-all-btn { display: inline-flex; align-items: center; gap: 5px; padding: 0.42rem 1rem; background: var(--primary); color: white; border-radius: 50px; font-size: 0.82rem; font-weight: 600; text-decoration: none; transition: all 0.3s; }
-.view-all-btn:hover { background: var(--dark); }
-.view-all-btn svg { width: 13px; height: 13px; }
-.image-strip-scroll { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 0.6rem; scroll-snap-type: x mandatory; scrollbar-width: thin; scrollbar-color: var(--secondary) transparent; -webkit-overflow-scrolling: touch; }
-.image-strip-scroll::-webkit-scrollbar { height: 3px; }
-.image-strip-scroll::-webkit-scrollbar-thumb { background: var(--secondary); border-radius: 2px; }
-.strip-img-item { flex: 0 0 250px; height: 190px; border-radius: 8px; overflow: hidden; cursor: pointer; scroll-snap-align: start; position: relative; transition: transform 0.3s; }
-.strip-img-item:hover { transform: scale(1.02); }
-.strip-img-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
-.strip-img-item:hover img { transform: scale(1.08); }
-.strip-img-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(58,31,22,0.85) 100%); opacity: 0; transition: opacity 0.3s; display: flex; align-items: flex-end; padding: 0.7rem; }
-.strip-img-item:hover .strip-img-overlay { opacity: 1; }
-.strip-img-overlay span { color: white; font-size: 0.78rem; font-weight: 500; }
+.image-strip-wrapper{grid-column:1/-1;max-height:0;overflow:hidden;transition:max-height 0.6s cubic-bezier(0.4,0,0.2,1),opacity 0.4s;opacity:0;}
+.image-strip-wrapper.open{max-height:420px;opacity:1;}
+.image-strip-panel{background:var(--white);border:1px solid rgba(163,71,45,0.12);border-radius:12px;padding:1.4rem;margin-top:0.5rem;}
+.image-strip-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;}
+.image-strip-header h4{font-family:var(--font-serif);color:var(--primary);font-size:1.05rem;margin:0;}
+.view-all-btn{display:inline-flex;align-items:center;gap:5px;padding:0.42rem 1rem;background:var(--primary);color:white;border-radius:50px;font-size:0.82rem;font-weight:600;text-decoration:none;transition:all 0.3s;}
+.view-all-btn:hover{background:var(--dark);}
+.view-all-btn svg{width:13px;height:13px;}
+.image-strip-scroll{display:flex;gap:10px;overflow-x:auto;padding-bottom:0.6rem;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:var(--secondary) transparent;-webkit-overflow-scrolling:touch;}
+.image-strip-scroll::-webkit-scrollbar{height:3px;}
+.image-strip-scroll::-webkit-scrollbar-thumb{background:var(--secondary);border-radius:2px;}
+.strip-img-item{flex:0 0 250px;height:190px;border-radius:8px;overflow:hidden;cursor:pointer;scroll-snap-align:start;position:relative;transition:transform 0.3s;}
+.strip-img-item:hover{transform:scale(1.02);}
+.strip-img-item img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s;}
+.strip-img-item:hover img{transform:scale(1.08);}
+.strip-img-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(58,31,22,0.85) 100%);opacity:0;transition:opacity 0.3s;display:flex;align-items:flex-end;padding:0.7rem;}
+.strip-img-item:hover .strip-img-overlay{opacity:1;}
+.strip-img-overlay span{color:white;font-size:0.78rem;font-weight:500;}
 
-/* Lightbox */
-.lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.96); z-index: 2000; align-items: center; justify-content: center; }
-.lightbox.active { display: flex; }
-.lightbox-inner { max-width: 90vw; max-height: 90vh; display: flex; flex-direction: column; align-items: center; }
-.lightbox-inner img { max-width: 100%; max-height: 80vh; border-radius: 8px; object-fit: contain; }
-.lightbox-caption { color: #E8D5C4; font-family: var(--font-serif); font-size: 0.9rem; margin-top: 0.8rem; }
-.lightbox-close { position: fixed; top: 18px; right: 18px; width: 42px; height: 42px; background: rgba(255,255,255,0.1); border: none; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.3s; z-index: 2001; }
-.lightbox-close:hover { background: var(--primary); }
-.lightbox-close svg { width: 20px; height: 20px; color: white; }
-.lightbox-nav { position: fixed; top: 50%; transform: translateY(-50%); width: 42px; height: 42px; background: rgba(255,255,255,0.1); border: none; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.3s; z-index: 2001; }
-.lightbox-nav:hover { background: var(--primary); }
-.lightbox-nav svg { width: 20px; height: 20px; color: white; }
-.lightbox-prev { left: 18px; }
-.lightbox-next { right: 18px; }
+/* RICH FOOTER */
+.rich-footer{background:#2A1510;position:relative;overflow:hidden;padding:5rem 1.5rem 2rem;}
+.footer-topo{position:absolute;inset:0;pointer-events:none;overflow:hidden;opacity:0.08;}
+.footer-topo svg{width:100%;height:100%;position:absolute;inset:0;}
+.ft{fill:none;stroke:rgba(240,215,185,1);stroke-width:1;}
+.ftt{fill:none;stroke:rgba(240,215,185,0.6);stroke-width:0.65;}
+.footer-inner{position:relative;z-index:2;max-width:1200px;margin:0 auto;}
+.footer-heading{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.5rem);color:#F0E6D6;text-align:center;margin-bottom:1rem;line-height:1.2;}
+.footer-heading span{color:#C07A5C;}
+.footer-subtext{text-align:center;color:rgba(240,230,214,0.5);font-size:0.9rem;margin-bottom:3.5rem;font-family:'Poppins',sans-serif;}
+.footer-contact-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1.5rem;margin-bottom:3.5rem;padding-bottom:3rem;border-bottom:1px solid rgba(240,230,214,0.1);}
+.footer-contact-item{display:flex;flex-direction:column;align-items:center;text-align:center;gap:0.8rem;padding:1.5rem 1rem;border:1px solid rgba(240,230,214,0.08);border-radius:12px;transition:all 0.3s;text-decoration:none;cursor:pointer;}
+.footer-contact-item:hover{border-color:rgba(192,122,92,0.4);background:rgba(240,230,214,0.04);transform:translateY(-4px);}
+.footer-contact-icon{width:42px;height:42px;color:#C07A5C;}
+.footer-contact-label{font-family:'Playfair Display',serif;font-size:1rem;color:#F0E6D6;}
+.footer-contact-value{font-size:0.8rem;color:rgba(240,230,214,0.55);font-family:'Poppins',sans-serif;word-break:break-word;}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.footer-bottom p{color:rgba(240,230,214,0.35);font-size:0.82rem;font-family:'Poppins',sans-serif;margin:0;}
+.footer-bottom-logo{height:32px;width:auto;opacity:0.7;}
+.footer-social{display:flex;gap:1rem;align-items:center;}
+.footer-social a{color:rgba(240,230,214,0.4);transition:color 0.3s;}
+.footer-social a:hover{color:#C07A5C;}
+.footer-social svg{width:18px;height:18px;}
 
-/* Footer */
-.footer-links { grid-template-columns: repeat(5,1fr); }
+/* FLOATING WHATSAPP */
+.float-whatsapp{position:fixed;bottom:28px;right:28px;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);z-index:999;text-decoration:none;transition:all 0.3s;animation:fadeUp 1s ease 2s both;}
+.float-whatsapp:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,0.5);}
+.float-whatsapp svg{width:30px;height:30px;color:white;}
+@media(max-width:768px){.float-whatsapp{display:none;}}
 
-/* ══════════════════════════════════════
-   RESPONSIVE
-══════════════════════════════════════ */
-@media (max-width: 768px) {
-  .services-grid { grid-template-columns: 1fr; }
-  .hero-logo-img { height: 58px; }
-  .title-text { font-size: 32px; }
-  .hero-title-svg { max-width: 300px; }
-  .strip-img-item { flex: 0 0 200px; height: 160px; }
-  .image-strip-wrapper.open { max-height: 340px; }
-  .navbar-topo { display: none; }
-  .hero-content { padding: 4.5rem 1.2rem 1.5rem; }
+/* BACK TO TOP */
+.back-to-top{position:fixed;bottom:28px;left:28px;width:42px;height:42px;background:rgba(163,71,45,0.85);border-radius:50%;display:none;align-items:center;justify-content:center;cursor:pointer;z-index:999;border:none;box-shadow:0 4px 14px rgba(0,0,0,0.2);transition:all 0.3s;}
+.back-to-top:hover{background:var(--primary);transform:translateY(-2px);}
+.back-to-top svg{width:18px;height:18px;color:white;}
+.back-to-top.visible{display:flex;}
+
+/* LIGHTBOX */
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.96);z-index:2000;align-items:center;justify-content:center;}
+.lightbox.active{display:flex;}
+.lightbox-inner{max-width:90vw;max-height:90vh;display:flex;flex-direction:column;align-items:center;}
+.lightbox-inner img{max-width:100%;max-height:80vh;border-radius:8px;object-fit:contain;}
+.lightbox-caption{color:#E8D5C4;font-family:var(--font-serif);font-size:0.9rem;margin-top:0.8rem;}
+.lightbox-close{position:fixed;top:18px;right:18px;width:42px;height:42px;background:rgba(255,255,255,0.1);border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.3s;z-index:2001;}
+.lightbox-close:hover{background:var(--primary);}
+.lightbox-close svg{width:20px;height:20px;color:white;}
+.lightbox-nav{position:fixed;top:50%;transform:translateY(-50%);width:42px;height:42px;background:rgba(255,255,255,0.1);border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.3s;z-index:2001;}
+.lightbox-nav:hover{background:var(--primary);}
+.lightbox-nav svg{width:20px;height:20px;color:white;}
+.lightbox-prev{left:18px;}
+.lightbox-next{right:18px;}
+
+/* MOBILE BAR */
+.mobile-bar{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--white);border-top:1px solid rgba(163,71,45,0.1);z-index:98;padding-bottom:env(safe-area-inset-bottom);}
+.mobile-bar.active{display:flex;}
+.mobile-btn{flex:1;padding:0.9rem;text-align:center;display:flex;align-items:center;justify-content:center;transition:background 0.3s;border-right:1px solid rgba(163,71,45,0.05);text-decoration:none;}
+.mobile-btn:last-child{border-right:none;}
+.mobile-btn:hover{background:var(--light);}
+.mobile-btn svg{width:22px;height:22px;color:var(--primary);}
+
+/* RESPONSIVE */
+@media(max-width:1024px){.footer-contact-grid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:768px){
+  .services-grid{grid-template-columns:1fr;}
+  .hero-logo-img{height:62px;}
+  .title-text{font-size:34px;}
+  .hero-title-svg{max-width:320px;}
+  .strip-img-item{flex:0 0 200px;height:160px;}
+  .image-strip-wrapper.open{max-height:340px;}
+  .navbar-topo{display:none;}
+  .hero-content{padding:4.5rem 1.2rem 1.5rem;}
+  .footer-contact-grid{grid-template-columns:repeat(2,1fr);}
+  .footer-bottom{flex-direction:column;align-items:center;text-align:center;}
 }
-@media (max-width: 480px) {
-  .title-text { font-size: 24px; }
-  .hero-title-svg { max-width: 230px; }
-  .hero-cta { flex-direction: column; align-items: stretch; }
-  .btn-outline { justify-content: center; }
-  .hero-logo-img { height: 48px; }
+@media(max-width:480px){
+  .title-text{font-size:26px;}
+  .hero-title-svg{max-width:240px;}
+  .hero-cta{flex-direction:column;align-items:stretch;}
+  .btn-outline{justify-content:center;}
+  .hero-logo-img{height:52px;}
 }
 </style>
 </head>
 <body>
 
-<!-- ══════════════════════════════════════
-     NAVBAR
-══════════════════════════════════════ -->
+<!-- NAVBAR -->
 <nav class="navbar" id="navbar">
-  <!-- Subtle topo pattern right side -->
   <div class="navbar-topo" aria-hidden="true">
     <svg viewBox="0 0 600 70" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
       <path d="M60,35 C80,18 110,14 132,26 C154,38 158,60 140,70 C122,80 96,72 78,58 C62,46 58,48 60,35Z" stroke="#3A1F16" stroke-width="0.9" fill="none"/>
       <path d="M48,30 C74,8 118,6 145,24 C170,42 172,72 148,84 C124,96 86,84 64,62 C44,42 38,48 48,30Z" stroke="#3A1F16" stroke-width="0.7" fill="none"/>
       <path d="M180,15 C200,4 228,8 240,24 C252,40 244,62 226,68 C208,74 186,62 178,44 C170,28 172,22 180,15Z" stroke="#3A1F16" stroke-width="0.9" fill="none"/>
-      <path d="M168,10 C194,-4 232,2 246,22 C260,42 250,68 228,76 C206,84 176,70 164,48 C152,28 154,20 168,10Z" stroke="#3A1F16" stroke-width="0.7" fill="none"/>
       <path d="M310,22 C328,10 356,12 368,28 C380,44 372,66 352,72 C332,78 308,64 300,46 C292,30 296,30 310,22Z" stroke="#3A1F16" stroke-width="0.9" fill="none"/>
-      <path d="M298,16 C322,0 360,4 374,24 C388,44 378,70 354,78 C330,86 298,70 286,48 C274,28 280,28 298,16Z" stroke="#3A1F16" stroke-width="0.7" fill="none"/>
       <path d="M430,8 C452,-4 484,2 494,20 C504,38 492,62 470,68 C448,74 422,58 416,38 C410,20 414,16 430,8Z" stroke="#3A1F16" stroke-width="0.9" fill="none"/>
       <path d="M540,28 C556,16 578,20 586,36 C594,52 582,70 564,74 C546,78 528,64 526,48 C524,34 528,36 540,28Z" stroke="#3A1F16" stroke-width="0.8" fill="none"/>
     </svg>
@@ -263,12 +229,10 @@
   <div class="container">
     <div class="nav-wrapper">
       <a href="index.html" class="logo">
-        <img src="assets/images/logo_cream.png" class="logo-cream" alt="PPA Architect" width="160" height="44">
-        <img src="assets/images/logo_brown.png" class="logo-brown" alt="PPA Architect" width="160" height="44">
+        <img src="assets/images/logo_cream.png" class="logo-cream" alt="PPA Architect" width="180" height="52">
+        <img src="assets/images/logo_brown.png" class="logo-brown" alt="PPA Architect" width="180" height="52">
       </a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
       <ul class="nav-menu" id="navMenu">
         <li><a href="index.html" class="nav-link">Home</a></li>
         <li><a href="projects.html" class="nav-link">Projects</a></li>
@@ -278,191 +242,66 @@
   </div>
 </nav>
 
-<!-- ══════════════════════════════════════
-     HERO
-══════════════════════════════════════ -->
+<!-- HERO -->
 <section class="hero" id="hero">
-
-  <!-- Dense random organic topo background -->
   <div class="hero-topo" aria-hidden="true">
     <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-
-      <!-- CLUSTER 1: Top-left nested ovals -->
-      <ellipse cx="155" cy="130" rx="155" ry="108" class="tl"/>
-      <ellipse cx="152" cy="127" rx="120" ry="82"  class="tlt"/>
-      <ellipse cx="149" cy="124" rx="88"  ry="60"  class="tlt"/>
-      <ellipse cx="147" cy="122" rx="60"  ry="40"  class="tlt"/>
-      <ellipse cx="145" cy="120" rx="36"  ry="24"  class="tlt"/>
-      <ellipse cx="143" cy="118" rx="18"  ry="12"  class="tlt"/>
-
-      <!-- CLUSTER 2: Top-right irregular blob -->
-      <path d="M1090,30 C1175,0 1295,18 1360,72 C1422,126 1428,202 1374,232 C1320,262 1224,248 1160,200 C1098,154 1072,100 1090,30Z" class="tl"/>
-      <path d="M1112,50 C1190,24 1296,42 1352,90 C1408,138 1410,204 1360,230 C1310,256 1224,240 1164,196 C1106,154 1085,112 1112,50Z" class="tlt"/>
-      <path d="M1136,72 C1204,50 1296,68 1344,110 C1392,152 1390,208 1346,230 C1302,252 1226,234 1170,194 C1116,156 1106,120 1136,72Z" class="tlt"/>
-      <path d="M1162,96 C1218,78 1294,96 1334,132 C1374,168 1368,214 1330,232 C1292,250 1226,230 1176,194 C1128,160 1120,130 1162,96Z" class="tlt"/>
-      <path d="M1192,122 C1236,108 1292,124 1322,154 C1352,184 1344,220 1312,234 C1280,248 1226,228 1182,196 C1140,166 1138,140 1192,122Z" class="tlt"/>
-
-      <!-- CLUSTER 3: Mid-left teardrop -->
-      <path d="M45,365 C15,315 24,252 76,232 C128,212 188,250 206,308 C224,366 196,432 148,446 C100,460 72,412 45,365Z" class="tl"/>
-      <path d="M63,360 C36,316 46,262 90,244 C134,226 188,262 204,316 C220,370 194,430 150,442 C108,454 88,402 63,360Z" class="tlt"/>
-      <path d="M82,355 C60,318 70,272 106,256 C142,240 188,274 202,323 C216,372 192,426 152,436 C114,446 100,390 82,355Z" class="tlt"/>
-      <path d="M102,350 C84,320 95,282 124,268 C154,254 188,286 200,330 C212,374 190,422 154,430 C120,438 118,378 102,350Z" class="tlt"/>
-      <path d="M124,345 C110,322 120,292 143,280 C167,268 188,298 198,337 C208,376 188,418 156,424 C126,430 136,366 124,345Z" class="tlt"/>
-
-      <!-- CLUSTER 4: Centre large irregular -->
-      <path d="M555,175 C642,125 772,138 848,202 C924,266 926,378 862,432 C798,486 676,478 604,424 C534,372 490,268 555,175Z" class="tl"/>
-      <path d="M578,198 C658,152 778,165 846,224 C914,283 912,386 852,436 C792,486 680,476 612,424 C546,374 510,272 578,198Z" class="tlt"/>
-      <path d="M603,222 C676,180 784,193 844,248 C904,303 900,396 844,442 C788,488 684,476 618,426 C554,378 530,278 603,222Z" class="tlt"/>
-      <path d="M630,248 C695,210 792,223 843,272 C894,321 888,404 836,446 C784,488 690,474 628,426 C568,380 552,282 630,248Z" class="tlt"/>
-      <path d="M660,276 C716,242 800,255 842,298 C884,341 876,414 830,450 C784,486 698,470 640,426 C584,384 578,306 660,276Z" class="tlt"/>
-      <path d="M692,306 C738,276 806,289 840,326 C874,363 864,424 822,454 C780,484 706,466 654,428 C604,392 618,332 692,306Z" class="tlt"/>
-
-      <!-- CLUSTER 5: Bottom-right nested circles -->
-      <ellipse cx="1295" cy="730" rx="185" ry="130" class="tl"/>
-      <ellipse cx="1292" cy="727" rx="148" ry="104" class="tlt"/>
-      <ellipse cx="1289" cy="724" rx="114" ry="80"  class="tlt"/>
-      <ellipse cx="1286" cy="721" rx="82"  ry="57"  class="tlt"/>
-      <ellipse cx="1283" cy="718" rx="54"  ry="37"  class="tlt"/>
-      <ellipse cx="1280" cy="715" rx="30"  ry="21"  class="tlt"/>
-      <ellipse cx="1278" cy="713" rx="14"  ry="10"  class="tlt"/>
-
-      <!-- CLUSTER 6: Bottom-left organic -->
-      <path d="M65,690 C34,648 40,596 82,576 C124,556 178,582 198,630 C218,678 198,736 156,750 C114,764 92,728 65,690Z" class="tl"/>
-      <path d="M82,686 C55,648 62,604 96,586 C130,568 178,593 196,637 C214,681 196,734 158,747 C122,760 106,722 82,686Z" class="tlt"/>
-      <path d="M100,682 C77,648 85,612 112,596 C139,580 178,604 194,643 C210,682 194,731 160,742 C128,754 120,714 100,682Z" class="tlt"/>
-      <path d="M120,678 C100,648 109,620 130,606 C152,592 178,614 192,650 C206,685 192,728 162,737 C134,746 136,706 120,678Z" class="tlt"/>
-
-      <!-- CLUSTER 7: Top-centre small loops -->
-      <ellipse cx="726" cy="55"  rx="95"  ry="52"  class="tl"/>
-      <ellipse cx="724" cy="53"  rx="70"  ry="38"  class="tlt"/>
-      <ellipse cx="722" cy="51"  rx="48"  ry="26"  class="tlt"/>
-      <ellipse cx="720" cy="49"  rx="28"  ry="15"  class="tlt"/>
-
-      <!-- CLUSTER 8: Right-mid elongated -->
-      <path d="M1365,368 C1344,326 1354,284 1396,272 C1438,260 1480,290 1488,334 C1496,378 1472,424 1432,432 C1392,440 1382,408 1365,368Z" class="tl"/>
-      <path d="M1378,366 C1360,330 1370,292 1404,281 C1438,270 1472,298 1479,338 C1486,378 1464,420 1428,428 C1392,436 1392,400 1378,366Z" class="tlt"/>
-      <path d="M1392,364 C1377,334 1388,300 1414,290 C1440,280 1465,306 1471,342 C1477,378 1457,416 1424,422 C1393,428 1404,392 1392,364Z" class="tlt"/>
-
-      <!-- CLUSTER 9: Upper-right secondary small -->
-      <ellipse cx="960"  cy="82"  rx="72"  ry="40"  class="tl"/>
-      <ellipse cx="958"  cy="80"  rx="52"  ry="28"  class="tlt"/>
-      <ellipse cx="956"  cy="78"  rx="34"  ry="18"  class="tlt"/>
-
-      <!-- CLUSTER 10: Bottom-centre medium -->
-      <path d="M660,820 C634,790 640,754 670,742 C700,730 734,752 742,784 C750,816 730,848 700,854 C672,860 682,846 660,820Z" class="tl"/>
-      <path d="M672,817 C650,790 657,758 681,748 C705,738 734,758 740,786 C746,814 728,842 701,847 C676,852 690,842 672,817Z" class="tlt"/>
-
-      <!-- CLUSTER 11: Left-mid small accent -->
-      <ellipse cx="280" cy="540" rx="58"  ry="36"  class="tl"/>
-      <ellipse cx="278" cy="538" rx="40"  ry="24"  class="tlt"/>
-      <ellipse cx="276" cy="536" rx="24"  ry="14"  class="tlt"/>
-
-      <!-- CLUSTER 12: Mid-right mid accent -->
-      <path d="M1060,490 C1044,464 1050,436 1074,428 C1098,420 1122,440 1126,468 C1130,496 1112,524 1086,528 C1062,532 1072,514 1060,490Z" class="tl"/>
-      <path d="M1070,488 C1056,466 1062,440 1082,433 C1102,426 1122,444 1125,469 C1128,494 1112,518 1088,522 C1066,526 1080,508 1070,488Z" class="tlt"/>
-
-      <!-- CLUSTER 13: Top-left secondary -->
-      <ellipse cx="360" cy="95"  rx="52"  ry="30"  class="tlt"/>
-      <ellipse cx="358" cy="93"  rx="34"  ry="19"  class="tlt"/>
-      <ellipse cx="356" cy="91"  rx="18"  ry="10"  class="tlt"/>
-
-      <!-- CLUSTER 14: Bottom scattered accents -->
-      <ellipse cx="440" cy="785" rx="62"  ry="36"  class="tlt"/>
-      <ellipse cx="438" cy="783" rx="42"  ry="24"  class="tlt"/>
-      <ellipse cx="436" cy="781" rx="24"  ry="14"  class="tlt"/>
-      <ellipse cx="900" cy="670" rx="74"  ry="44"  class="tlt"/>
-      <ellipse cx="898" cy="668" rx="52"  ry="30"  class="tlt"/>
-      <ellipse cx="896" cy="666" rx="32"  ry="18"  class="tlt"/>
-      <ellipse cx="1150" cy="130" rx="44" ry="26"  class="tlt"/>
-      <ellipse cx="1148" cy="128" rx="28" ry="16"  class="tlt"/>
-
-      <!-- CLUSTER 15: Upper-mid left blob -->
-      <path d="M320,240 C295,210 302,174 330,162 C358,150 390,172 398,204 C406,236 386,268 358,274 C330,280 342,268 320,240Z" class="tl"/>
-      <path d="M332,238 C310,212 318,180 340,169 C362,158 390,178 396,207 C402,235 384,264 358,270 C334,276 350,262 332,238Z" class="tlt"/>
-      <path d="M346,236 C326,214 334,186 352,177 C370,168 390,185 394,210 C398,235 382,260 358,265 C336,270 362,256 346,236Z" class="tlt"/>
-
-      <!-- CLUSTER 16: Mid-screen right secondary -->
-      <path d="M1200,350 C1178,318 1185,280 1214,268 C1243,256 1276,278 1282,312 C1288,346 1268,380 1240,386 C1212,392 1220,380 1200,350Z" class="tl"/>
-      <path d="M1212,348 C1193,320 1200,286 1224,276 C1248,265 1276,286 1280,316 C1284,346 1266,376 1241,382 C1218,388 1228,374 1212,348Z" class="tlt"/>
-      <path d="M1226,346 C1210,322 1218,293 1236,284 C1254,276 1276,294 1279,320 C1282,346 1264,372 1242,377 C1222,382 1238,368 1226,346Z" class="tlt"/>
-
-      <!-- CLUSTER 17: Bottom-centre extra -->
-      <path d="M700,800 C675,770 682,734 710,722 C738,710 770,732 776,762 C782,792 762,824 734,830 C706,836 722,828 700,800Z" class="tl"/>
-      <path d="M712,798 C690,771 698,739 720,728 C742,717 770,737 774,764 C778,791 760,820 734,826 C710,832 730,823 712,798Z" class="tlt"/>
-      <path d="M726,796 C707,773 715,746 733,737 C751,728 770,745 773,768 C776,791 759,816 735,821 C713,826 741,817 726,796Z" class="tlt"/>
-
-      <!-- CLUSTER 18: Far right mid -->
-      <ellipse cx="1430" cy="480" rx="70"  ry="45"  class="tl"/>
-      <ellipse cx="1428" cy="478" rx="50"  ry="32"  class="tlt"/>
-      <ellipse cx="1426" cy="476" rx="32"  ry="20"  class="tlt"/>
-      <ellipse cx="1424" cy="474" rx="16"  ry="10"  class="tlt"/>
-
-      <!-- CLUSTER 19: Left lower secondary -->
-      <path d="M170,580 C148,550 155,516 180,505 C205,494 234,514 240,544 C246,574 228,604 202,610 C178,616 190,608 170,580Z" class="tl"/>
-      <path d="M182,578 C163,551 170,521 190,511 C210,501 234,519 238,546 C242,573 226,600 202,606 C180,612 198,603 182,578Z" class="tlt"/>
-      <path d="M196,576 C180,553 187,527 203,519 C219,511 234,526 237,549 C240,572 225,596 203,601 C183,606 208,597 196,576Z" class="tlt"/>
-
-      <!-- CLUSTER 20: Top right extra small -->
-      <ellipse cx="850"  cy="35"  rx="48"  ry="26"  class="tlt"/>
-      <ellipse cx="848"  cy="33"  rx="30"  ry="16"  class="tlt"/>
-      <ellipse cx="500"  cy="860" rx="55"  ry="30"  class="tlt"/>
-      <ellipse cx="498"  cy="858" rx="36"  ry="19"  class="tlt"/>
-      <ellipse cx="1240" cy="580" rx="46"  ry="28"  class="tlt"/>
-      <ellipse cx="1238" cy="578" rx="28"  ry="17"  class="tlt"/>
-      <ellipse cx="220"  cy="820" rx="40"  ry="24"  class="tlt"/>
-      <ellipse cx="218"  cy="818" rx="24"  ry="14"  class="tlt"/>
-      <ellipse cx="780"  cy="120" rx="38"  ry="22"  class="tlt"/>
-      <ellipse cx="778"  cy="118" rx="22"  ry="13"  class="tlt"/>
+      <ellipse cx="155" cy="130" rx="155" ry="108" class="tl"/><ellipse cx="152" cy="127" rx="120" ry="82" class="tlt"/><ellipse cx="149" cy="124" rx="88" ry="60" class="tlt"/><ellipse cx="147" cy="122" rx="60" ry="40" class="tlt"/><ellipse cx="145" cy="120" rx="36" ry="24" class="tlt"/><ellipse cx="143" cy="118" rx="18" ry="12" class="tlt"/>
+      <path d="M1090,30 C1175,0 1295,18 1360,72 C1422,126 1428,202 1374,232 C1320,262 1224,248 1160,200 C1098,154 1072,100 1090,30Z" class="tl"/><path d="M1112,50 C1190,24 1296,42 1352,90 C1408,138 1410,204 1360,230 C1310,256 1224,240 1164,196 C1106,154 1085,112 1112,50Z" class="tlt"/><path d="M1136,72 C1204,50 1296,68 1344,110 C1392,152 1390,208 1346,230 C1302,252 1226,234 1170,194 C1116,156 1106,120 1136,72Z" class="tlt"/><path d="M1162,96 C1218,78 1294,96 1334,132 C1374,168 1368,214 1330,232 C1292,250 1226,230 1176,194 C1128,160 1120,130 1162,96Z" class="tlt"/><path d="M1192,122 C1236,108 1292,124 1322,154 C1352,184 1344,220 1312,234 C1280,248 1226,228 1182,196 C1140,166 1138,140 1192,122Z" class="tlt"/>
+      <path d="M45,365 C15,315 24,252 76,232 C128,212 188,250 206,308 C224,366 196,432 148,446 C100,460 72,412 45,365Z" class="tl"/><path d="M63,360 C36,316 46,262 90,244 C134,226 188,262 204,316 C220,370 194,430 150,442 C108,454 88,402 63,360Z" class="tlt"/><path d="M82,355 C60,318 70,272 106,256 C142,240 188,274 202,323 C216,372 192,426 152,436 C114,446 100,390 82,355Z" class="tlt"/><path d="M102,350 C84,320 95,282 124,268 C154,254 188,286 200,330 C212,374 190,422 154,430 C120,438 118,378 102,350Z" class="tlt"/>
+      <path d="M555,175 C642,125 772,138 848,202 C924,266 926,378 862,432 C798,486 676,478 604,424 C534,372 490,268 555,175Z" class="tl"/><path d="M578,198 C658,152 778,165 846,224 C914,283 912,386 852,436 C792,486 680,476 612,424 C546,374 510,272 578,198Z" class="tlt"/><path d="M603,222 C676,180 784,193 844,248 C904,303 900,396 844,442 C788,488 684,476 618,426 C554,378 530,278 603,222Z" class="tlt"/><path d="M630,248 C695,210 792,223 843,272 C894,321 888,404 836,446 C784,488 690,474 628,426 C568,380 552,282 630,248Z" class="tlt"/><path d="M660,276 C716,242 800,255 842,298 C884,341 876,414 830,450 C784,486 698,470 640,426 C584,384 578,306 660,276Z" class="tlt"/><path d="M692,306 C738,276 806,289 840,326 C874,363 864,424 822,454 C780,484 706,466 654,428 C604,392 618,332 692,306Z" class="tlt"/>
+      <ellipse cx="1295" cy="730" rx="185" ry="130" class="tl"/><ellipse cx="1292" cy="727" rx="148" ry="104" class="tlt"/><ellipse cx="1289" cy="724" rx="114" ry="80" class="tlt"/><ellipse cx="1286" cy="721" rx="82" ry="57" class="tlt"/><ellipse cx="1283" cy="718" rx="54" ry="37" class="tlt"/><ellipse cx="1280" cy="715" rx="30" ry="21" class="tlt"/>
+      <path d="M65,690 C34,648 40,596 82,576 C124,556 178,582 198,630 C218,678 198,736 156,750 C114,764 92,728 65,690Z" class="tl"/><path d="M82,686 C55,648 62,604 96,586 C130,568 178,593 196,637 C214,681 196,734 158,747 C122,760 106,722 82,686Z" class="tlt"/><path d="M100,682 C77,648 85,612 112,596 C139,580 178,604 194,643 C210,682 194,731 160,742 C128,754 120,714 100,682Z" class="tlt"/>
+      <ellipse cx="726" cy="55" rx="95" ry="52" class="tl"/><ellipse cx="724" cy="53" rx="70" ry="38" class="tlt"/><ellipse cx="722" cy="51" rx="48" ry="26" class="tlt"/><ellipse cx="720" cy="49" rx="28" ry="15" class="tlt"/>
+      <path d="M1365,368 C1344,326 1354,284 1396,272 C1438,260 1480,290 1488,334 C1496,378 1472,424 1432,432 C1392,440 1382,408 1365,368Z" class="tl"/><path d="M1378,366 C1360,330 1370,292 1404,281 C1438,270 1472,298 1479,338 C1486,378 1464,420 1428,428 C1392,436 1392,400 1378,366Z" class="tlt"/>
+      <ellipse cx="960" cy="82" rx="72" ry="40" class="tl"/><ellipse cx="958" cy="80" rx="52" ry="28" class="tlt"/><ellipse cx="956" cy="78" rx="34" ry="18" class="tlt"/>
+      <path d="M660,820 C634,790 640,754 670,742 C700,730 734,752 742,784 C750,816 730,848 700,854 C672,860 682,846 660,820Z" class="tl"/><path d="M672,817 C650,790 657,758 681,748 C705,738 734,758 740,786 C746,814 728,842 701,847 C676,852 690,842 672,817Z" class="tlt"/>
+      <ellipse cx="280" cy="540" rx="58" ry="36" class="tl"/><ellipse cx="278" cy="538" rx="40" ry="24" class="tlt"/><ellipse cx="276" cy="536" rx="24" ry="14" class="tlt"/>
+      <path d="M1060,490 C1044,464 1050,436 1074,428 C1098,420 1122,440 1126,468 C1130,496 1112,524 1086,528 C1062,532 1072,514 1060,490Z" class="tl"/><path d="M1070,488 C1056,466 1062,440 1082,433 C1102,426 1122,444 1125,469 C1128,494 1112,518 1088,522 C1066,526 1080,508 1070,488Z" class="tlt"/>
+      <ellipse cx="360" cy="95" rx="52" ry="30" class="tlt"/><ellipse cx="358" cy="93" rx="34" ry="19" class="tlt"/><ellipse cx="356" cy="91" rx="18" ry="10" class="tlt"/>
+      <ellipse cx="440" cy="785" rx="62" ry="36" class="tlt"/><ellipse cx="438" cy="783" rx="42" ry="24" class="tlt"/><ellipse cx="436" cy="781" rx="24" ry="14" class="tlt"/>
+      <ellipse cx="900" cy="670" rx="74" ry="44" class="tlt"/><ellipse cx="898" cy="668" rx="52" ry="30" class="tlt"/><ellipse cx="896" cy="666" rx="32" ry="18" class="tlt"/>
+      <ellipse cx="1150" cy="130" rx="44" ry="26" class="tlt"/><ellipse cx="1148" cy="128" rx="28" ry="16" class="tlt"/>
+      <path d="M320,240 C295,210 302,174 330,162 C358,150 390,172 398,204 C406,236 386,268 358,274 C330,280 342,268 320,240Z" class="tl"/><path d="M332,238 C310,212 318,180 340,169 C362,158 390,178 396,207 C402,235 384,264 358,270 C334,276 350,262 332,238Z" class="tlt"/><path d="M346,236 C326,214 334,186 352,177 C370,168 390,185 394,210 C398,235 382,260 358,265 C336,270 362,256 346,236Z" class="tlt"/>
+      <path d="M1200,350 C1178,318 1185,280 1214,268 C1243,256 1276,278 1282,312 C1288,346 1268,380 1240,386 C1212,392 1220,380 1200,350Z" class="tl"/><path d="M1212,348 C1193,320 1200,286 1224,276 C1248,265 1276,286 1280,316 C1284,346 1266,376 1241,382 C1218,388 1228,374 1212,348Z" class="tlt"/>
+      <path d="M700,800 C675,770 682,734 710,722 C738,710 770,732 776,762 C782,792 762,824 734,830 C706,836 722,828 700,800Z" class="tl"/><path d="M712,798 C690,771 698,739 720,728 C742,717 770,737 774,764 C778,791 760,820 734,826 C710,832 730,823 712,798Z" class="tlt"/>
+      <ellipse cx="1430" cy="480" rx="70" ry="45" class="tl"/><ellipse cx="1428" cy="478" rx="50" ry="32" class="tlt"/><ellipse cx="1426" cy="476" rx="32" ry="20" class="tlt"/>
+      <path d="M170,580 C148,550 155,516 180,505 C205,494 234,514 240,544 C246,574 228,604 202,610 C178,616 190,608 170,580Z" class="tl"/><path d="M182,578 C163,551 170,521 190,511 C210,501 234,519 238,546 C242,573 226,600 202,606 C180,612 198,603 182,578Z" class="tlt"/>
+      <ellipse cx="850" cy="35" rx="48" ry="26" class="tlt"/><ellipse cx="848" cy="33" rx="30" ry="16" class="tlt"/>
+      <ellipse cx="500" cy="860" rx="55" ry="30" class="tlt"/><ellipse cx="498" cy="858" rx="36" ry="19" class="tlt"/>
+      <ellipse cx="1240" cy="580" rx="46" ry="28" class="tlt"/><ellipse cx="1238" cy="578" rx="28" ry="17" class="tlt"/>
+      <ellipse cx="220" cy="820" rx="40" ry="24" class="tlt"/><ellipse cx="218" cy="818" rx="24" ry="14" class="tlt"/>
+      <ellipse cx="780" cy="120" rx="38" ry="22" class="tlt"/><ellipse cx="778" cy="118" rx="22" ry="13" class="tlt"/>
     </svg>
   </div>
 
-  <div class="container">
+  <div class="container" style="display:flex;justify-content:center;width:100%;">
     <div class="hero-content">
-      <!-- Real logo — cream version for hero -->
-      <img
-        src="assets/images/logo_cream.png"
-        class="hero-logo-img"
-        alt="PPA - Piyush Pore Architects"
-        width="400" height="78"
-      >
-      <!-- Name: stroke → fill animation -->
-      <svg class="hero-title-svg" viewBox="0 0 580 65" xmlns="http://www.w3.org/2000/svg" aria-label="Ar. Piyush S. Pore">
-        <text class="title-text" x="290" y="52" text-anchor="middle">Ar. Piyush S. Pore</text>
+      <img src="assets/images/logo_cream.png" class="hero-logo-img" alt="PPA - Piyush Pore Architects" width="420" height="90">
+      <svg class="hero-title-svg" viewBox="0 0 640 68" xmlns="http://www.w3.org/2000/svg">
+        <text class="title-text" x="320" y="54" text-anchor="middle">Ar. Piyush S. Pore</text>
       </svg>
       <div class="hero-divider"></div>
-      <p class="hero-subtitle">where line meets imaginations</p>
+      <p class="hero-subtitle"><span id="typeTarget"></span><span class="typewriter-cursor" id="typeCursor"></span></p>
       <p class="hero-services-line">Architecture &nbsp;•&nbsp; Interior &nbsp;•&nbsp; Landscape &nbsp;•&nbsp; Industrial</p>
       <div class="hero-cta">
-        <a href="tel:+919595787780" class="btn btn-outline">
-          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <span>Call</span>
-        </a>
-        <a href="https://wa.me/919595787780?text=Hello%20Piyush%20Pore%20Architects%2C%20I%20would%20like%20to%20discuss%20a%20project." class="btn btn-outline" target="_blank" rel="noopener noreferrer">
-          <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.6 5.6L.6 23.4l6.02-1.58c1.6.9 3.5 1.36 5.38 1.36 6.2 0 11.3-5.1 11.3-11.3 0-3-1.2-5.9-3.4-8.06zM12 21.4c-1.68 0-3.31-.44-4.73-1.28l-.34-.2-3.56.93.94-3.46-.22-.35C2.62 15.45 2.1 13.76 2.1 11.9c0-5.05 4.1-9.15 9.15-9.15 2.43 0 4.72.94 6.43 2.64 1.71 1.71 2.65 3.98 2.65 6.43 0 5.05-4.1 9.15-9.15 9.15zm5.04-6.71c-.19-.09-1.13-.56-1.31-.62-.17-.06-.3-.09-.42.09-.13.17-.49.62-.6.75-.11.12-.22.14-.41.05s-1.17-.43-2.23-1.37c-.62-.53-1.04-1.18-1.16-1.38-.12-.19-.01-.3.09-.39.09-.09.19-.23.28-.35.09-.12.12-.2.19-.33.06-.13.03-.25-.02-.34-.05-.09-.42-1.02-.58-1.39-.15-.37-.3-.32-.42-.32-.11 0-.23-.01-.35-.01-.12 0-.31.05-.47.23-.16.18-.62.6-.62 1.47s.64 1.71.73 1.83c.09.12 1.25 1.91 3.03 2.68.42.18.75.29 1.01.37.42.13.81.11 1.11.07.34-.05 1.04-.43 1.19-.84.15-.41.15-.76.1-.84-.04-.07-.16-.12-.35-.21z"/></svg>
-          <span>WhatsApp</span>
-        </a>
-        <a href="mailto:piyushporearchitects01@gmail.com?subject=Project%20Discussion" class="btn btn-outline">
-          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-          <span>Email</span>
-        </a>
-        <a href="https://www.instagram.com/piyush_pore_architects" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="3"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
-          <span>Instagram</span>
-        </a>
+        <a href="tel:+919595787780" class="btn btn-outline"><svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>Call</span></a>
+        <a href="https://wa.me/919595787780?text=Hello%20Piyush%20Pore%20Architects%2C%20I%20would%20like%20to%20discuss%20a%20project." class="btn btn-outline" target="_blank" rel="noopener noreferrer"><svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.6 5.6L.6 23.4l6.02-1.58c1.6.9 3.5 1.36 5.38 1.36 6.2 0 11.3-5.1 11.3-11.3 0-3-1.2-5.9-3.4-8.06zM12 21.4c-1.68 0-3.31-.44-4.73-1.28l-.34-.2-3.56.93.94-3.46-.22-.35C2.62 15.45 2.1 13.76 2.1 11.9c0-5.05 4.1-9.15 9.15-9.15 2.43 0 4.72.94 6.43 2.64 1.71 1.71 2.65 3.98 2.65 6.43 0 5.05-4.1 9.15-9.15 9.15zm5.04-6.71c-.19-.09-1.13-.56-1.31-.62-.17-.06-.3-.09-.42.09-.13.17-.49.62-.6.75-.11.12-.22.14-.41.05s-1.17-.43-2.23-1.37c-.62-.53-1.04-1.18-1.16-1.38-.12-.19-.01-.3.09-.39.09-.09.19-.23.28-.35.09-.12.12-.2.19-.33.06-.13.03-.25-.02-.34-.05-.09-.42-1.02-.58-1.39-.15-.37-.3-.32-.42-.32-.11 0-.23-.01-.35-.01-.12 0-.31.05-.47.23-.16.18-.62.6-.62 1.47s.64 1.71.73 1.83c.09.12 1.25 1.91 3.03 2.68.42.18.75.29 1.01.37.42.13.81.11 1.11.07.34-.05 1.04-.43 1.19-.84.15-.41.15-.76.1-.84-.04-.07-.16-.12-.35-.21z"/></svg><span>WhatsApp</span></a>
+        <a href="mailto:piyushporearchitects01@gmail.com?subject=Project%20Discussion" class="btn btn-outline"><svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span>Email</span></a>
+        <a href="https://www.instagram.com/piyush_pore_architects" target="_blank" rel="noopener noreferrer" class="btn btn-outline"><svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="3"/><circle cx="17.5" cy="6.5" r="1.5"/></svg><span>Instagram</span></a>
       </div>
       <div class="hero-secondary">
-        <a href="projects.html" class="link-arrow">
-          <span>View Portfolio</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
+        <a href="projects.html" class="link-arrow"><span>View Portfolio</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+        <svg class="scroll-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════
-     ABOUT
-══════════════════════════════════════ -->
+<!-- ABOUT -->
 <section class="about">
   <div class="container">
     <div class="about-content">
@@ -471,23 +310,17 @@
   </div>
 </section>
 
-<!-- ══════════════════════════════════════
-     SERVICES — data-driven, easy to extend
-══════════════════════════════════════ -->
+<!-- SERVICES -->
 <section class="services" id="services">
   <div class="container">
-    <h2 class="services-section-title">Our Services</h2>
-    <p class="services-section-sub">Click a category to explore our work</p>
+    <h2 class="services-section-title reveal">Our Services</h2>
+    <p class="services-section-sub reveal reveal-delay-1">Click a category to explore our work</p>
     <div class="services-grid" id="servicesGrid">
-      <!-- Cards injected by JS from SERVICE_DATA below -->
       <div class="image-strip-wrapper" id="strip-panel">
         <div class="image-strip-panel">
           <div class="image-strip-header">
             <h4 id="strip-title"></h4>
-            <a href="projects.html" class="view-all-btn" id="strip-viewall">
-              View All Projects
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
+            <a href="projects.html" class="view-all-btn" id="strip-viewall">View All Projects <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
           </div>
           <div class="image-strip-scroll" id="strip-scroll"></div>
         </div>
@@ -496,49 +329,54 @@
   </div>
 </section>
 
-<!-- ══════════════════════════════════════
-     CONTACT
-══════════════════════════════════════ -->
-<section class="contact" id="contact">
-  <div class="container">
-    <h2 class="contact-title">Get In Touch</h2>
-    <div class="contact-grid">
-      <div class="contact-card">
-        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        <h3>Phone</h3><a href="tel:+919595787780" class="contact-link">+91 9595787780</a>
-      </div>
-      <div class="contact-card">
-        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-        <h3>Email</h3><a href="mailto:piyushporearchitects01@gmail.com?subject=Project%20Discussion" class="contact-link">piyushporearchitects01@gmail.com</a>
-      </div>
-      <div class="contact-card">
-        <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.6 5.6L.6 23.4l6.02-1.58c1.6.9 3.5 1.36 5.38 1.36 6.2 0 11.3-5.1 11.3-11.3 0-3-1.2-5.9-3.4-8.06zM12 21.4c-1.68 0-3.31-.44-4.73-1.28l-.34-.2-3.56.93.94-3.46-.22-.35C2.62 15.45 2.1 13.76 2.1 11.9c0-5.05 4.1-9.15 9.15-9.15 2.43 0 4.72.94 6.43 2.64 1.71 1.71 2.65 3.98 2.65 6.43 0 5.05-4.1 9.15-9.15 9.15zm5.04-6.71c-.19-.09-1.13-.56-1.31-.62-.17-.06-.3-.09-.42.09-.13.17-.49.62-.6.75-.11.12-.22.14-.41.05s-1.17-.43-2.23-1.37c-.62-.53-1.04-1.18-1.16-1.38-.12-.19-.01-.3.09-.39.09-.09.19-.23.28-.35.09-.12.12-.2.19-.33.06-.13.03-.25-.02-.34-.05-.09-.42-1.02-.58-1.39-.15-.37-.3-.32-.42-.32-.11 0-.23-.01-.35-.01-.12 0-.31.05-.47.23-.16.18-.62.6-.62 1.47s.64 1.71.73 1.83c.09.12 1.25 1.91 3.03 2.68.42.18.75.29 1.01.37.42.13.81.11 1.11.07.34-.05 1.04-.43 1.19-.84.15-.41.15-.76.1-.84-.04-.07-.16-.12-.35-.21z"/></svg>
-        <h3>WhatsApp</h3><a href="https://wa.me/919595787780?text=Hello%20Piyush%20Pore%20Architects%2C%20I%20would%20like%20to%20discuss%20a%20project." class="contact-link" target="_blank" rel="noopener noreferrer">Message Us</a>
-      </div>
-      <div class="contact-card">
-        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="3"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
-        <h3>Instagram</h3><a href="https://www.instagram.com/piyush_pore_architects" target="_blank" rel="noopener noreferrer" class="contact-link">@piyush_pore_architects</a>
-      </div>
-      <div class="contact-card">
-        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        <h3>Location</h3><a href="https://maps.google.com/?q=Pune+Nashik+Kopargaon+Maharashtra" target="_blank" rel="noopener noreferrer" class="contact-link">Pune, Nashik, Kopargaon</a>
-      </div>
-    </div>
+<!-- RICH FOOTER -->
+<footer class="rich-footer" id="contact">
+  <div class="footer-topo" aria-hidden="true">
+    <svg viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="120" cy="100" rx="140" ry="95" class="ft"/><ellipse cx="117" cy="97" rx="100" ry="68" class="ftt"/><ellipse cx="114" cy="94" rx="66" ry="44" class="ftt"/><ellipse cx="111" cy="91" rx="36" ry="24" class="ftt"/>
+      <path d="M1100,40 C1180,10 1300,28 1360,80 C1420,132 1418,210 1362,236 C1306,262 1208,244 1148,192 C1090,142 1068,96 1100,40Z" class="ft"/><path d="M1124,62 C1196,36 1298,54 1350,100 C1402,146 1398,214 1347,237 C1296,260 1206,241 1150,192 C1096,145 1078,104 1124,62Z" class="ftt"/><path d="M1150,86 C1212,64 1296,82 1340,122 C1384,162 1378,220 1332,240 C1286,260 1204,238 1152,192 C1102,148 1092,114 1150,86Z" class="ftt"/>
+      <ellipse cx="720" cy="520" rx="160" ry="95" class="ft"/><ellipse cx="718" cy="518" rx="118" ry="70" class="ftt"/><ellipse cx="716" cy="516" rx="80" ry="47" class="ftt"/><ellipse cx="714" cy="514" rx="46" ry="27" class="ftt"/>
+      <path d="M280,400 C255,365 264,322 298,308 C332,294 372,318 380,356 C388,394 366,432 332,440 C298,448 302,432 280,400Z" class="ft"/><path d="M294,398 C272,366 282,328 309,315 C336,302 371,324 378,358 C385,392 365,428 333,436 C303,444 312,428 294,398Z" class="ftt"/>
+      <ellipse cx="400" cy="100" rx="55" ry="32" class="ftt"/><ellipse cx="398" cy="98" rx="35" ry="20" class="ftt"/>
+    </svg>
   </div>
-</section>
-
-<!-- ══════════════════════════════════════
-     FOOTER
-══════════════════════════════════════ -->
-<footer class="footer">
-  <div class="container footer-row">
-    <p>&copy; 2026 PPA - Piyush Pore Architect. All rights reserved.</p>
-    <div class="footer-links footer-icons">
-      <a href="tel:+919595787780" class="footer-link" aria-label="Call"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
-      <a href="mailto:piyushporearchitects01@gmail.com?subject=Project%20Discussion" class="footer-link" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>
-      <a href="https://wa.me/919595787780?text=Hello%20Piyush%20Pore%20Architects%2C%20I%20would%20like%20to%20discuss%20a%20project." class="footer-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.6 5.6L.6 23.4l6.02-1.58c1.6.9 3.5 1.36 5.38 1.36 6.2 0 11.3-5.1 11.3-11.3 0-3-1.2-5.9-3.4-8.06zM12 21.4c-1.68 0-3.31-.44-4.73-1.28l-.34-.2-3.56.93.94-3.46-.22-.35C2.62 15.45 2.1 13.76 2.1 11.9c0-5.05 4.1-9.15 9.15-9.15 2.43 0 4.72.94 6.43 2.64 1.71 1.71 2.65 3.98 2.65 6.43 0 5.05-4.1 9.15-9.15 9.15zm5.04-6.71c-.19-.09-1.13-.56-1.31-.62-.17-.06-.3-.09-.42.09-.13.17-.49.62-.6.75-.11.12-.22.14-.41.05s-1.17-.43-2.23-1.37c-.62-.53-1.04-1.18-1.16-1.38-.12-.19-.01-.3.09-.39.09-.09.19-.23.28-.35.09-.12.12-.2.19-.33.06-.13.03-.25-.02-.34-.05-.09-.42-1.02-.58-1.39-.15-.37-.3-.32-.42-.32-.11 0-.23-.01-.35-.01-.12 0-.31.05-.47.23-.16.18-.62.6-.62 1.47s.64 1.71.73 1.83c.09.12 1.25 1.91 3.03 2.68.42.18.75.29 1.01.37.42.13.81.11 1.11.07.34-.05 1.04-.43 1.19-.84.15-.41.15-.76.1-.84-.04-.07-.16-.12-.35-.21z"/></svg></a>
-      <a href="https://maps.google.com/?q=Pune+Nashik+Kopargaon+Maharashtra" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="Location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></a>
-      <a href="https://www.instagram.com/piyush_pore_architects" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37a4 4 0 1 1-2.37-2.37"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg></a>
+  <div class="footer-inner">
+    <h2 class="footer-heading reveal">Where Every Line Meets<br><span>Your Imagination</span></h2>
+    <p class="footer-subtext reveal reveal-delay-1">Let's design something extraordinary together</p>
+    <div class="footer-contact-grid">
+      <a href="tel:+919595787780" class="footer-contact-item reveal reveal-delay-1">
+        <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span class="footer-contact-label">Phone</span>
+        <span class="footer-contact-value">+91 9595787780</span>
+      </a>
+      <a href="mailto:piyushporearchitects01@gmail.com?subject=Project%20Discussion" class="footer-contact-item reveal reveal-delay-2">
+        <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        <span class="footer-contact-label">Email</span>
+        <span class="footer-contact-value">piyushporearchitects01@gmail.com</span>
+      </a>
+      <a href="https://wa.me/919595787780?text=Hello%20Piyush%20Pore%20Architects%2C%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" class="footer-contact-item reveal reveal-delay-3">
+        <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.6 5.6L.6 23.4l6.02-1.58c1.6.9 3.5 1.36 5.38 1.36 6.2 0 11.3-5.1 11.3-11.3 0-3-1.2-5.9-3.4-8.06zM12 21.4c-1.68 0-3.31-.44-4.73-1.28l-.34-.2-3.56.93.94-3.46-.22-.35C2.62 15.45 2.1 13.76 2.1 11.9c0-5.05 4.1-9.15 9.15-9.15 2.43 0 4.72.94 6.43 2.64 1.71 1.71 2.65 3.98 2.65 6.43 0 5.05-4.1 9.15-9.15 9.15zm5.04-6.71c-.19-.09-1.13-.56-1.31-.62-.17-.06-.3-.09-.42.09-.13.17-.49.62-.6.75-.11.12-.22.14-.41.05s-1.17-.43-2.23-1.37c-.62-.53-1.04-1.18-1.16-1.38-.12-.19-.01-.3.09-.39.09-.09.19-.23.28-.35.09-.12.12-.2.19-.33.06-.13.03-.25-.02-.34-.05-.09-.42-1.02-.58-1.39-.15-.37-.3-.32-.42-.32-.11 0-.23-.01-.35-.01-.12 0-.31.05-.47.23-.16.18-.62.6-.62 1.47s.64 1.71.73 1.83c.09.12 1.25 1.91 3.03 2.68.42.18.75.29 1.01.37.42.13.81.11 1.11.07.34-.05 1.04-.43 1.19-.84.15-.41.15-.76.1-.84-.04-.07-.16-.12-.35-.21z"/></svg>
+        <span class="footer-contact-label">WhatsApp</span>
+        <span class="footer-contact-value">Message Us</span>
+      </a>
+      <a href="https://www.instagram.com/piyush_pore_architects" target="_blank" rel="noopener noreferrer" class="footer-contact-item reveal reveal-delay-4">
+        <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="3"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+        <span class="footer-contact-label">Instagram</span>
+        <span class="footer-contact-value">@piyush_pore_architects</span>
+      </a>
+      <a href="https://maps.google.com/?q=Pune+Nashik+Kopargaon+Maharashtra" target="_blank" rel="noopener noreferrer" class="footer-contact-item reveal reveal-delay-5">
+        <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span class="footer-contact-label">Location</span>
+        <span class="footer-contact-value">Pune · Nashik · Kopargaon</span>
+      </a>
+    </div>
+    <div class="footer-bottom">
+      <img src="assets/images/logo_cream.png" class="footer-bottom-logo" alt="PPA" width="120" height="32">
+      <p>&copy; 2026 PPA - Piyush Pore Architect. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/piyush_pore_architects" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="3"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></a>
+        <a href="https://wa.me/919595787780?text=Hello%20Piyush%20Pore%20Architects%2C%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.6 5.6L.6 23.4l6.02-1.58c1.6.9 3.5 1.36 5.38 1.36 6.2 0 11.3-5.1 11.3-11.3 0-3-1.2-5.9-3.4-8.06zM12 21.4c-1.68 0-3.31-.44-4.73-1.28l-.34-.2-3.56.93.94-3.46-.22-.35C2.62 15.45 2.1 13.76 2.1 11.9c0-5.05 4.1-9.15 9.15-9.15 2.43 0 4.72.94 6.43 2.64 1.71 1.71 2.65 3.98 2.65 6.43 0 5.05-4.1 9.15-9.15 9.15zm5.04-6.71c-.19-.09-1.13-.56-1.31-.62-.17-.06-.3-.09-.42.09-.13.17-.49.62-.6.75-.11.12-.22.14-.41.05s-1.17-.43-2.23-1.37c-.62-.53-1.04-1.18-1.16-1.38-.12-.19-.01-.3.09-.39.09-.09.19-.23.28-.35.09-.12.12-.2.19-.33.06-.13.03-.25-.02-.34-.05-.09-.42-1.02-.58-1.39-.15-.37-.3-.32-.42-.32-.11 0-.23-.01-.35-.01-.12 0-.31.05-.47.23-.16.18-.62.6-.62 1.47s.64 1.71.73 1.83c.09.12 1.25 1.91 3.03 2.68.42.18.75.29 1.01.37.42.13.81.11 1.11.07.34-.05 1.04-.43 1.19-.84.15-.41.15-.76.1-.84-.04-.07-.16-.12-.35-.21z"/></svg></a>
+      </div>
     </div>
   </div>
 </footer>
@@ -548,189 +386,132 @@
   <a href="tel:+919595787780" class="mobile-btn" title="Call"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
   <a href="https://wa.me/919595787780?text=Hello%20Piyush%20Pore%20Architects%2C%20I%20would%20like%20to%20discuss%20a%20project." class="mobile-btn" title="WhatsApp" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.6 5.6L.6 23.4l6.02-1.58c1.6.9 3.5 1.36 5.38 1.36 6.2 0 11.3-5.1 11.3-11.3 0-3-1.2-5.9-3.4-8.06zM12 21.4c-1.68 0-3.31-.44-4.73-1.28l-.34-.2-3.56.93.94-3.46-.22-.35C2.62 15.45 2.1 13.76 2.1 11.9c0-5.05 4.1-9.15 9.15-9.15 2.43 0 4.72.94 6.43 2.64 1.71 1.71 2.65 3.98 2.65 6.43 0 5.05-4.1 9.15-9.15 9.15zm5.04-6.71c-.19-.09-1.13-.56-1.31-.62-.17-.06-.3-.09-.42.09-.13.17-.49.62-.6.75-.11.12-.22.14-.41.05s-1.17-.43-2.23-1.37c-.62-.53-1.04-1.18-1.16-1.38-.12-.19-.01-.3.09-.39.09-.09.19-.23.28-.35.09-.12.12-.2.19-.33.06-.13.03-.25-.02-.34-.05-.09-.42-1.02-.58-1.39-.15-.37-.3-.32-.42-.32-.11 0-.23-.01-.35-.01-.12 0-.31.05-.47.23-.16.18-.62.6-.62 1.47s.64 1.71.73 1.83c.09.12 1.25 1.91 3.03 2.68.42.18.75.29 1.01.37.42.13.81.11 1.11.07.34-.05 1.04-.43 1.19-.84.15-.41.15-.76.1-.84-.04-.07-.16-.12-.35-.21z"/></svg></a>
   <a href="mailto:piyushporearchitects01@gmail.com?subject=Project%20Discussion" class="mobile-btn" title="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>
-  <a href="https://maps.google.com/?q=Pune+Nashik+Kopargaon+Maharashtra" target="_blank" rel="noopener noreferrer" class="mobile-btn" title="Location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></a>
   <a href="https://www.instagram.com/piyush_pore_architects" target="_blank" rel="noopener noreferrer" class="mobile-btn" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37a4 4 0 1 1-2.37-2.37"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg></a>
+  <a href="https://maps.google.com/?q=Pune+Nashik+Kopargaon+Maharashtra" target="_blank" rel="noopener noreferrer" class="mobile-btn" title="Location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></a>
 </div>
 
+<!-- Floating WhatsApp desktop -->
+<a href="https://wa.me/919595787780?text=Hello%20Piyush%20Pore%20Architects%2C%20I%20would%20like%20to%20discuss%20a%20project." class="float-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.6 5.6L.6 23.4l6.02-1.58c1.6.9 3.5 1.36 5.38 1.36 6.2 0 11.3-5.1 11.3-11.3 0-3-1.2-5.9-3.4-8.06zM12 21.4c-1.68 0-3.31-.44-4.73-1.28l-.34-.2-3.56.93.94-3.46-.22-.35C2.62 15.45 2.1 13.76 2.1 11.9c0-5.05 4.1-9.15 9.15-9.15 2.43 0 4.72.94 6.43 2.64 1.71 1.71 2.65 3.98 2.65 6.43 0 5.05-4.1 9.15-9.15 9.15zm5.04-6.71c-.19-.09-1.13-.56-1.31-.62-.17-.06-.3-.09-.42.09-.13.17-.49.62-.6.75-.11.12-.22.14-.41.05s-1.17-.43-2.23-1.37c-.62-.53-1.04-1.18-1.16-1.38-.12-.19-.01-.3.09-.39.09-.09.19-.23.28-.35.09-.12.12-.2.19-.33.06-.13.03-.25-.02-.34-.05-.09-.42-1.02-.58-1.39-.15-.37-.3-.32-.42-.32-.11 0-.23-.01-.35-.01-.12 0-.31.05-.47.23-.16.18-.62.6-.62 1.47s.64 1.71.73 1.83c.09.12 1.25 1.91 3.03 2.68.42.18.75.29 1.01.37.42.13.81.11 1.11.07.34-.05 1.04-.43 1.19-.84.15-.41.15-.76.1-.84-.04-.07-.16-.12-.35-.21z"/></svg>
+</a>
+
+<!-- Back to top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
 <!-- Lightbox -->
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
   <button class="lightbox-close" id="lightboxClose" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
   <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
-  <div class="lightbox-inner">
-    <img id="lightboxImg" src="" alt="" width="1200" height="800">
-    <p class="lightbox-caption" id="lightboxCaption"></p>
-  </div>
+  <div class="lightbox-inner"><img id="lightboxImg" src="" alt="" width="1200" height="800"><p class="lightbox-caption" id="lightboxCaption"></p></div>
   <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></button>
 </div>
 
+<script src="assets/js/script.js"></script>
 <script>
-/* ════════════════════════════════════════════════════════
-   SERVICE DATA — TO ADD A NEW SERVICE:
-   Copy one object, fill in id/name/desc/cover/images
-   ════════════════════════════════════════════════════════ */
-const SERVICE_DATA = [
-  {
-    id:    'interior',
-    name:  'Interior Design',
-    desc:  'Elegant interiors with meticulous attention to detail',
-    cover: 'assets/images/interior4_living_room.jpeg',
-    link:  'projects.html#interior',
-    /* Preview images shown in the strip (pick 6-8 best) */
-    preview: [
-      { src: 'assets/images/interior4_living_room.jpeg',    label: 'Living Room' },
-      { src: 'assets/images/interior5_living_room.jpeg',    label: 'Living Room' },
-      { src: 'assets/images/interior6_living_room.jpeg',    label: 'Living Room' },
-      { src: 'assets/images/interior4_jewllry_shop.jpeg',   label: 'Jewellery Shop' },
-      { src: 'assets/images/interior1_common_bedroom.jpeg', label: 'Bedroom' },
-      { src: 'assets/images/interior14_master_bedroom.jpeg',label: 'Master Bedroom' },
-      { src: 'assets/images/interior18_living_room_o2.jpeg',label: 'O2 Living Room' },
-    ]
-  },
-  {
-    id:    'architecture',
-    name:  'Architecture',
-    desc:  'Innovative residential & commercial architecture',
-    cover: 'assets/images/lonavalavilla1.jpeg',
-    link:  'projects.html#architecture',
-    preview: [
-      { src: 'assets/images/lonavalavilla1.jpeg',            label: 'Lonavala Villa' },
-      { src: 'assets/images/lonavalavilla2.jpeg',            label: 'Lonavala Villa' },
-      { src: 'assets/images/architecture1_jadhavvilla.jpeg', label: 'Jadhav Villa' },
-      { src: 'assets/images/kopb1.jpeg',                     label: 'Kopargaon Bungalow' },
-      { src: 'assets/images/niphad1.jpeg',                   label: 'Niphad Project' },
-      { src: 'assets/images/final_post.jpeg',                label: 'Architecture' },
-    ]
-  },
-  {
-    id:    'industrial',
-    name:  'Industrial Design',
-    desc:  'Functional spaces optimized for operational excellence',
-    cover: 'assets/images/industrynashikdesign.JPEG',
-    link:  'projects.html#industrial',
-    preview: [
-      { src: 'assets/images/industrynashikdesign.JPEG', label: 'Nashik Industrial' },
-    ]
-  }
-  /* ── ADD NEW SERVICE HERE ──
-  ,{
-    id:    'landscape',
-    name:  'Landscape Design',
-    desc:  'Harmonious outdoor environments',
-    cover: 'assets/images/your_cover_image.jpeg',
-    link:  'projects.html#landscape',
-    preview: [
-      { src: 'assets/images/landscape1.jpeg', label: 'Garden Project' },
-    ]
-  }
-  */
+/* SERVICE DATA */
+const SERVICE_DATA=[
+  {id:'interior',name:'Interior Design',desc:'Elegant interiors with meticulous attention to detail',cover:'assets/images/interior4_living_room.jpeg',link:'projects.html#interior',preview:[
+    {src:'assets/images/interior4_living_room.jpeg',label:'Living Room'},{src:'assets/images/interior5_living_room.jpeg',label:'Living Room'},{src:'assets/images/interior6_living_room.jpeg',label:'Living Room'},
+    {src:'assets/images/interior4_jewllry_shop.jpeg',label:'Jewellery Shop'},{src:'assets/images/interior1_common_bedroom.jpeg',label:'Bedroom'},{src:'assets/images/interior14_master_bedroom.jpeg',label:'Master Bedroom'},{src:'assets/images/interior18_living_room_o2.jpeg',label:'O2 Living Room'},
+  ]},
+  {id:'architecture',name:'Architecture',desc:'Innovative residential & commercial architecture',cover:'assets/images/lonavalavilla1.jpeg',link:'projects.html#architecture',preview:[
+    {src:'assets/images/lonavalavilla1.jpeg',label:'Lonavala Villa'},{src:'assets/images/lonavalavilla2.jpeg',label:'Lonavala Villa'},
+    {src:'assets/images/architecture1_jadhavvilla.jpeg',label:'A Small House at Pachora'},{src:'assets/images/kopb1.jpeg',label:'Bungalow at Kopargaon'},
+    {src:'assets/images/niphad1.jpeg',label:'Niphad Project'},{src:'assets/images/final_post.jpeg',label:'Architecture'},
+  ]},
+  {id:'industrial',name:'Industrial Design',desc:'Functional spaces optimized for operational excellence',cover:'assets/images/industrynashikdesign.JPEG',link:'projects.html#industrial',preview:[
+    {src:'assets/images/industrynashikdesign.JPEG',label:'Nashik Industrial'},
+  ]}
 ];
 
-/* ════════════════════════════════
-   Build service cards from data
-════════════════════════════════ */
-(function buildServiceCards() {
-  const grid   = document.getElementById('servicesGrid');
-  const strip  = document.getElementById('strip-panel');
-  SERVICE_DATA.forEach(svc => {
-    const card = document.createElement('div');
-    card.className = 'service-card';
-    card.id = 'card-' + svc.id;
-    card.setAttribute('onclick', `toggleStrip('${svc.id}')`);
-    card.innerHTML = `
-      <div class="service-card-preview">
-        <img src="${svc.cover}" alt="${svc.name}" loading="lazy" width="400" height="200">
-      </div>
+/* Build cards */
+(function(){
+  const grid=document.getElementById('servicesGrid');
+  const strip=document.getElementById('strip-panel');
+  SERVICE_DATA.forEach((svc,i)=>{
+    const card=document.createElement('div');
+    card.className='service-card reveal reveal-delay-'+(i+1);
+    card.id='card-'+svc.id;
+    card.setAttribute('onclick',`toggleStrip('${svc.id}')`);
+    card.innerHTML=`<span class="service-num">0${i+1}</span>
+      <div class="service-card-preview"><img src="${svc.cover}" alt="${svc.name}" loading="lazy" width="400" height="200"></div>
       <div class="service-card-body">
-        <div class="service-card-info">
-          <h3>${svc.name}</h3>
-          <p>${svc.desc}</p>
-        </div>
-        <div class="service-card-arrow">
-          <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="9 18 15 12 9 6"/>
-          </svg>
-        </div>
+        <div class="service-card-info"><h3>${svc.name}</h3><p>${svc.desc}</p></div>
+        <div class="service-card-arrow"><svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></div>
       </div>`;
-    grid.insertBefore(card, strip);
+    grid.insertBefore(card,strip);
   });
 })();
 
-/* ════════════════════════════════
-   Strip toggle
-════════════════════════════════ */
-let activeStrip = null, lightboxImages = [], lightboxIndex = 0;
-
-function toggleStrip(id) {
-  const panel  = document.getElementById('strip-panel');
-  const scroll = document.getElementById('strip-scroll');
-  if (activeStrip === id) {
-    panel.classList.remove('open');
-    document.getElementById('card-' + id).classList.remove('active');
-    activeStrip = null; return;
-  }
-  if (activeStrip) document.getElementById('card-' + activeStrip).classList.remove('active');
-  activeStrip = id;
-  document.getElementById('card-' + id).classList.add('active');
-  const svc = SERVICE_DATA.find(s => s.id === id);
-  document.getElementById('strip-title').textContent   = svc.name;
-  document.getElementById('strip-viewall').href        = svc.link;
-  scroll.innerHTML = '';
-  lightboxImages = svc.preview;
-  svc.preview.forEach((img, i) => {
-    const item = document.createElement('div');
-    item.className = 'strip-img-item';
-    item.innerHTML = `
-      <img src="${img.src}" alt="${img.label}" loading="lazy" width="250" height="190">
-      <div class="strip-img-overlay"><span>${img.label}</span></div>`;
-    item.addEventListener('click', () => openLightbox(i));
-    scroll.appendChild(item);
+/* Strip */
+let activeStrip=null,lightboxImages=[],lightboxIndex=0;
+function toggleStrip(id){
+  const panel=document.getElementById('strip-panel'),scroll=document.getElementById('strip-scroll');
+  if(activeStrip===id){panel.classList.remove('open');document.getElementById('card-'+id).classList.remove('active');activeStrip=null;return;}
+  if(activeStrip)document.getElementById('card-'+activeStrip).classList.remove('active');
+  activeStrip=id;document.getElementById('card-'+id).classList.add('active');
+  const svc=SERVICE_DATA.find(s=>s.id===id);
+  document.getElementById('strip-title').textContent=svc.name;
+  document.getElementById('strip-viewall').href=svc.link;
+  scroll.innerHTML='';lightboxImages=svc.preview;
+  svc.preview.forEach((img,i)=>{
+    const item=document.createElement('div');item.className='strip-img-item';
+    item.innerHTML=`<img src="${img.src}" alt="${img.label}" loading="lazy" width="250" height="190"><div class="strip-img-overlay"><span>${img.label}</span></div>`;
+    item.addEventListener('click',()=>openLightbox(i));scroll.appendChild(item);
   });
-  panel.classList.add('open');
-  setTimeout(() => panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 100);
+  panel.classList.add('open');setTimeout(()=>panel.scrollIntoView({behavior:'smooth',block:'nearest'}),100);
 }
 
-/* ════════════════════════════════
-   Lightbox
-════════════════════════════════ */
-function openLightbox(i) {
-  lightboxIndex = i; updateLb();
-  document.getElementById('lightbox').classList.add('active');
-  document.body.style.overflow = 'hidden';
-}
-function updateLb() {
-  document.getElementById('lightboxImg').src         = lightboxImages[lightboxIndex].src;
-  document.getElementById('lightboxCaption').textContent = lightboxImages[lightboxIndex].label;
-}
-const lb = document.getElementById('lightbox');
-document.getElementById('lightboxClose').onclick = closeLb;
-lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
-document.getElementById('lightboxPrev').onclick = () => { lightboxIndex = (lightboxIndex - 1 + lightboxImages.length) % lightboxImages.length; updateLb(); };
-document.getElementById('lightboxNext').onclick = () => { lightboxIndex = (lightboxIndex + 1) % lightboxImages.length; updateLb(); };
-function closeLb() { lb.classList.remove('active'); document.body.style.overflow = ''; }
-document.addEventListener('keydown', e => {
-  if (!lb.classList.contains('active')) return;
-  if (e.key === 'Escape')      closeLb();
-  if (e.key === 'ArrowLeft')  { lightboxIndex = (lightboxIndex - 1 + lightboxImages.length) % lightboxImages.length; updateLb(); }
-  if (e.key === 'ArrowRight') { lightboxIndex = (lightboxIndex + 1) % lightboxImages.length; updateLb(); }
-});
+/* Lightbox */
+function openLightbox(i){lightboxIndex=i;updateLb();document.getElementById('lightbox').classList.add('active');document.body.style.overflow='hidden';}
+function updateLb(){document.getElementById('lightboxImg').src=lightboxImages[lightboxIndex].src;document.getElementById('lightboxCaption').textContent=lightboxImages[lightboxIndex].label;}
+const lb=document.getElementById('lightbox');
+function closeLb(){lb.classList.remove('active');document.body.style.overflow='';}
+document.getElementById('lightboxClose').onclick=closeLb;
+lb.addEventListener('click',e=>{if(e.target===lb)closeLb();});
+document.getElementById('lightboxPrev').onclick=()=>{lightboxIndex=(lightboxIndex-1+lightboxImages.length)%lightboxImages.length;updateLb();};
+document.getElementById('lightboxNext').onclick=()=>{lightboxIndex=(lightboxIndex+1)%lightboxImages.length;updateLb();};
+document.addEventListener('keydown',e=>{if(!lb.classList.contains('active'))return;if(e.key==='Escape')closeLb();if(e.key==='ArrowLeft'){lightboxIndex=(lightboxIndex-1+lightboxImages.length)%lightboxImages.length;updateLb();}if(e.key==='ArrowRight'){lightboxIndex=(lightboxIndex+1)%lightboxImages.length;updateLb();}});
 
-/* ════════════════════════════════
-   Navbar + mobile bar
-════════════════════════════════ */
-window.addEventListener('scroll', () =>
-  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60));
-function updateBar() {
-  document.getElementById('mobileBar').classList.toggle('active', window.innerWidth <= 768);
-}
-updateBar(); window.addEventListener('resize', updateBar);
-document.getElementById('menuToggle').addEventListener('click', () => {
-  document.getElementById('menuToggle').classList.toggle('active');
-  document.getElementById('navMenu').classList.toggle('active');
-});
-document.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', () => {
-  document.getElementById('menuToggle').classList.remove('active');
-  document.getElementById('navMenu').classList.remove('active');
-}));
+/* Navbar + back to top */
+const navbar=document.getElementById('navbar'),btt=document.getElementById('backToTop');
+window.addEventListener('scroll',()=>{navbar.classList.toggle('scrolled',window.scrollY>60);btt.classList.toggle('visible',window.scrollY>400);});
+btt.onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
+
+/* Mobile bar */
+function updateBar(){document.getElementById('mobileBar').classList.toggle('active',window.innerWidth<=768);}
+updateBar();window.addEventListener('resize',updateBar);
+
+/* Menu */
+document.getElementById('menuToggle').addEventListener('click',()=>{document.getElementById('menuToggle').classList.toggle('active');document.getElementById('navMenu').classList.toggle('active');});
+document.querySelectorAll('.nav-link').forEach(l=>l.addEventListener('click',()=>{document.getElementById('menuToggle').classList.remove('active');document.getElementById('navMenu').classList.remove('active');}));
+
+/* TYPEWRITER */
+(function(){
+  const text='where line meets imaginations',target=document.getElementById('typeTarget'),cursor=document.getElementById('typeCursor');
+  let i=0;
+  function type(){if(i<=text.length){target.textContent=text.slice(0,i);i++;setTimeout(type,i===1?1200:55);}else{setTimeout(()=>cursor.style.display='none',1500);}}
+  setTimeout(type,1400);
+})();
+
+
+
+/* SCROLL REVEAL */
+(function(){
+  const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+})();
+
+/* MOUSE PARALLAX on topo */
+(function(){
+  const topo=document.querySelector('.hero-topo svg');if(!topo)return;
+  document.addEventListener('mousemove',e=>{
+    const x=(e.clientX/window.innerWidth-0.5)*18,y=(e.clientY/window.innerHeight-0.5)*12;
+    topo.style.transform=`translate(${x}px,${y}px)`;topo.style.transition='transform 0.6s ease-out';
+  });
+})();
 </script>
 </body>
 </html>
